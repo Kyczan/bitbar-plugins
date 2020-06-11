@@ -1,5 +1,7 @@
 # My BitBar Plugins
 
+![Plugins](./scrots/plugins.png)
+
 [BitBar](https://github.com/matryer/bitbar) is a great way to add your own widgets into OSX bar. Only need is to create a script that writes some info into standard output (in NodeJS this is `console.log()`).
 
 This repo contains my set of scripts. Most of them are written in NodeJS and this repo looks like typical npm project.
@@ -41,9 +43,13 @@ AIRLY_INSTALLATION_ID="yourInstallationId"
 
 ### Caffeine
 
+![Caffeinate](./scrots/caffeinate.png)
+
 This is bash script. It allows to turn on/off caffeinate - build in program that prevents your Mac from sleep or turning off screen.
 
 ### Sonoff
+
+![Sonoff](./scrots/sonoff.png)
 
 Allows to control your smart lights in home directly from your Mac. More explanation - soon.
 
