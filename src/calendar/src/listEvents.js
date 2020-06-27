@@ -5,7 +5,7 @@ const isToday = require('date-fns/isToday')
 const isTomorrow = require('date-fns/isTomorrow')
 const isSameDay = require('date-fns/isSameDay')
 
-// from how many days fetch events
+// for how many days fetch events
 const NUMBER_OF_DAYS = 4
 
 const getBoundaryDates = () => {
@@ -70,13 +70,13 @@ const listEvents = async auth => {
     console.log(format(day, formatString, {locale: pl}))
 
     allEvents.map(event => {
-      const eventDate = event.start.dateTime ? new Date(event.start.dateTime) : new Date(event.start.date)
+      const startTime = event.start.dateTime
+      const eventDate = startTime ? new Date(startTime) : new Date(event.start.date)
       if(isSameDay(day, eventDate)) {
-        const startTime = event.start.dateTime
-        const start = startTime ? format(new Date(startTime), 'HH:mm', {locale: pl}) : 'cały dzień'
+        const start = startTime ? format(new Date(startTime), 'HH:mm ', {locale: pl}) : ''
         const summary = event.summary
         const cal = event.organizer.displayName
-        const result = `${start}: ${summary} (${cal}) | color=black`
+        const result = `${start}${summary} (${cal}) | color=black`
         console.log(result)
       }
     })
