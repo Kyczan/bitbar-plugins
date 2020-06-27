@@ -19,6 +19,8 @@
   "dependencies": {
     "axios": "^0.19.2",
     "capitalize": "^2.0.3",
-    "dotenv": "^8.2.0"
+    "date-fns": "^2.14.0",
+    "dotenv": "^8.2.0",
+    "googleapis": "^39.2.0"
   }
 }
