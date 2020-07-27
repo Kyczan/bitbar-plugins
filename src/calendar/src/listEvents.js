@@ -76,7 +76,7 @@ const listEvents = async auth => {
         const start = startTime ? format(new Date(startTime), 'HH:mm ', {locale: pl}) : ''
         const summary = event.summary
         const cal = event.organizer.displayName
-        const result = `${start}${summary} (${cal}) | color=black`
+        const result = `${start}${summary} (${cal}) | href=#`
         console.log(result)
       }
     })
